@@ -7,10 +7,13 @@ _global router_
 /search -> search
 
 _users router_
-/users/edit -> edit profile
-/users/delete -> delete profile
+/users/:id -> see profile
+/users/edit -> edit my profile
+/users/delete -> delete my profile
+/users/logout -> logout
 
 _video router_
-/videos/watch -> watch video
-/videos/edit -> edit video
-/videos/delete -> delete video
+/videos/:id -> watch video
+/videos/:id/edit -> edit video
+/videos/:id/delete -> delete video
+/videos/upload -> upload video

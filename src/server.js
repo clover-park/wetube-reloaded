@@ -8,8 +8,12 @@ const PORT = 4000;
 
 const app = express();
 const logger = morgan("dev");
+
+app.set("view engine", "pug");
+//뷰 엔젠을 pug로 설정
 app.use(logger);
 
+//router 3개 생성
 app.use("/", globalRouter);
 app.use("/videos", videoRouter);
 //누군가 /videos로 시작하는 url을 찾는다면

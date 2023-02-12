@@ -1,13 +1,10 @@
 import express from "express";
+import { edit, remove } from "../controllers/userController";
 
 const userRouter = express.Router();
 
-const handleEditUser = (req, res) => {
-  res.send("Edit User");
-  //router의 첫 페이지 만들기
-};
-
-userRouter.get("/edit", handleEditUser);
+userRouter.get("/edit", edit);
+userRouter.get("/remove", remove);
 //함수 사용
 
 export default userRouter;
